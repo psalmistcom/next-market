@@ -81,12 +81,12 @@ class Product extends Model
         return $this->sale_price ?? $this->base_price;
     }
 
-    public function scopeActive(Product | User $query)
+    public function scopeActive($query)
     {
         return $query->where('status', 'active');
     }
 
-    public function scopeFeatured(Product | User $query)
+    public function scopeFeatured($query)
     {
         return $query->where('is_featured', true);
     }
